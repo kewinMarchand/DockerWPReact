@@ -1,0 +1,21 @@
+{
+  "name": "react-example",
+  "version": "1.0.0",
+  "description": "Wordpress / React integration",
+  "main": "index.js",
+  "author": "Kewin Marchand",
+  "scripts": {
+    "build": "webpack build",
+    "start": "webpack --watch"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^6.1.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.4"
+  }
+}
