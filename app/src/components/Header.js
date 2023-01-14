@@ -30,15 +30,17 @@ export function Header(props) {
                         {siteInfos.description}
                     </Typography>
                 </Box>
-                <Box component={'ul'} sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
-                    {siteInfos.menu.length && siteInfos.menu.map(item => (
-                        <li key={item.id}>
-                            <a href={item.url} style={{color: 'inherit', textDecoration: 'unset'}}>
-                                {item.title}
-                            </a>
-                        </li>
-                    ))}
-                </Box>
+                {0 !== siteInfos.menu.length &&
+                    <Box component={'ul'} sx={{flexGrow: 1, display: 'flex', justifyContent: 'flex-end', gap: 2}}>
+                        {siteInfos.menu.map(item => (
+                            <li key={item.id}>
+                                <a href={item.url} style={{color: 'inherit', textDecoration: 'unset'}}>
+                                    {item.title}
+                                </a>
+                            </li>
+                        ))}
+                    </Box>
+                }
             </Toolbar>
         </AppBar>
     )

@@ -1,6 +1,12 @@
 .idea
 
-./app/node_modules
-./app/build
-
 CREDENTIALS.md
+
+app/build
+app/node_modules
+
+wordpress/plugins
+wordpress/uploads
+wordpress/themes/twentytwentyone
+wordpress/themes/twentytwentytwo
+wordpress/themes/twentytwentythree

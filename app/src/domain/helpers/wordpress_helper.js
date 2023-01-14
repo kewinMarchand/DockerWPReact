@@ -1,4 +1,6 @@
 /*https://developer.wordpress.org/rest-api/reference/*/
+import {WordpressProps} from "../model/model";
+
 const API_ENDPOINTS = [
     '', // posts
     'categories',
@@ -10,19 +12,25 @@ const API_ENDPOINTS = [
     'users',
     'types',
     'statuses',
-    'settings',
-    'themes',
+    // 'settings', Unauthorized
+    // 'themes', Unauthorized
     'search',
-    'block-types',
+    // 'block-types', Unauthorized
     'blocks',
-    'block-renderer',
-    'plugins'
+    // 'block-renderer', Unauthorized
+    // 'plugins' Unauthorized
 ];
 
 function fetchApi(key) {
     return fetch(`/wp-json/wp/v2/${key}`)
         .then(response => response.json())
         .then((json) => json);
+}
+
+export function getAllPhpDatas(props) {
+    const phpDatas = new WordpressProps(props);
+
+    return phpDatas;
 }
 
 export function getAllApiDatas() {

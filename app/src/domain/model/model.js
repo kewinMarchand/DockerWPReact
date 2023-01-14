@@ -21,7 +21,9 @@ export class WordpressProps {
     }
 
     get page() {
-        return new Page(this.wp_page);
+        if (this.wp_page) {
+            return new Page(this.wp_page);
+        }
     }
 
     get posts() {
@@ -56,7 +58,7 @@ export class WordpressProps {
     }
 
     get isPostPage() {
-        return "post" === this.page.type
+        return this.page && "post" === this.page.type
     }
 }
 
